@@ -16,7 +16,7 @@ async function parsedContacts() {
 async function listContacts() {
   try {
     const contacts = await parsedContacts();
-    console.log('List of contacts:'.orange);
+    console.log('List of contacts:'.cyan);
     console.table(contacts);
     return contacts;
   } catch (error) {
@@ -55,7 +55,7 @@ async function removeContact(contactId) {
       'utf8',
     );
 
-    console.log('Contact deleted !'.green);
+    console.log('Contact deleted !'.brightRed);
     console.table(newContacts);
 
     return newContacts;
